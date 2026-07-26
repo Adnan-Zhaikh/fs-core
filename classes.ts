@@ -1,13 +1,30 @@
 class BankAccount {
-    private _balance: number = 0;
-    get balance(): number { return this._balance; }
-    
-    set deposit(amount: number) {
-        if (amount > 0) this._balance += amount;
-    }
+  private balance: number;
+  public owner: string;
+
+  constructor(owner: string, balance: number) {
+    this.owner = owner;
+    this.balance = balance;
+  }
+
+  deposit(amount: number): void {
+    this.balance += amount;
+  }
+
+  getBalance(): number {
+    return this.balance;
+  }
 }
 
-const account = new BankAccount();
-account.deposit = 500;
+const acc = new BankAccount("Adnan", 1000);
+// acc.balance;
+console.log(acc.getBalance());
 
-console.log(account.balance);
+//Shorthand constructor syntax
+class BankAccount1 {
+  constructor(public owner: string, private balance: number) {}
+
+  getBalance(): number {
+    return this.balance;
+  }
+}
