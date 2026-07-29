@@ -1,1 +1,1 @@
-Full Stack Development (TypeScript)
+Full Stack Development (TypeScript, Next.js)
