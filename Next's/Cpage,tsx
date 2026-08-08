@@ -1,0 +1,14 @@
+// Demo File for practicing code.
+
+
+import { submitContactForm } from "./action";
+
+export default function ContactPage() {
+    return (
+        <form action={submitContactForm}>
+          <input type="email" name="email" placeholder="Email" />
+          <input type="text" name="message" placeholder="Message" />
+          <button type="submit">Submit</button>
+        </form>
+    );
+}
